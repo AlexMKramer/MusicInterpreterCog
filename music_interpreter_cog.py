@@ -39,25 +39,36 @@ def gpt_integration(text):
 
 
 gpt_initial_prompt = [{'role': 'user',
-                       'content': "Using song lyrics, come up with a prompt for an image generator.  "
-                                  "Please follow the format exactly. The format should be broken down "
-                                  "like this: {Art Style}, {Subject}, {Details}, {Color}\n The art style "
-                                  "should be determined by the overall impression of the song.  If it is "
-                                  "sad, then something like La Douleur should be used. If it is happy, "
-                                  "perhaps a vibrant street art style.\nThe Subject should be determined "
-                                  "by who the song is about.  If the song is about a couple trying to "
-                                  "escape the city, then the subject should be a couple.\nThe Details "
-                                  "should be determined by descriptive words used in the song.  If they "
-                                  "mention empty bottles, then add empty bottles to the prompt.\nThe "
-                                  "color should be determined by the mood of the song.  If the mood is a "
-                                  "happy one, use bright colors.\nHere is an example:\n{A dreamlike and "
-                                  "ethereal art style}, {a couple standing on a cliffside embracing, "
-                                  "overlooking a surreal and beautiful landscape}, {sunset, grassy, "
-                                  "soft wind}, {soft pastels, with hints of warm oranges and pinks}"},
+                       'content': "Using the song lyrics that I will provide, come up with a prompt for an image "
+                                  "generator.  Please follow the format exactly using curly brackets at the beginning "
+                                  "and end.  The format should be broken down like this: Setting and Atmosphere: "
+                                  "Describe the overall mood or atmosphere you want the image to convey. This could "
+                                  "include details about the location, time of day, weather conditions, etc. \nMain "
+                                  "Subject: Clearly define the main subject or focus of the image. You can add "
+                                  "emphasis to certain aspects of the subject by specifying details or actions. "
+                                  "\nAdditional Details and Actions: Think about what other elements you want to "
+                                  "include in the scene to make it more interesting or dynamic. This could be "
+                                  "secondary subjects, background elements, or specific actions taking place. "
+                                  "\nPhotographic Techniques: Consider any specific photographic techniques or styles "
+                                  "you want to incorporate into the image. This could include things like long "
+                                  "exposure, high contrast, or experimental techniques. \nHere is an example of a "
+                                  "proper prompt: {extreme long shot, a pianist with his back to the camera in the "
+                                  "middle of a devastated street,lit by fire, playing a piano on fire, "
+                                  "musical instruments catching fire around, a piano burning, sad eyes, "
+                                  "dramatic eyes, Afghanistan war ambient, 14mm, highly detailed, pieces of paper "
+                                  "burning falling through the air, realistic, explosions in background, "
+                                  "depth of field, texture, ultra detailed clhothes and skin, cinematic, "
+                                  "well lighting, canon photography, war photograpy, iconic, professional "
+                                  "photography, award-winning photography, extreme wide shot, pieces of paper "
+                                  "catching fire and falling around.}"},
                       {'role': 'assistant',
-                       'content': "{Vibrant and energetic street art style}, {a group of friends dancing and "
-                                  "celebrating under the city lights}, {joyful, urban, rhythm}, {bold and lively "
-                                  "colors, with splashes of neon blues and pinks}"}, ]
+                       'content': "{Moody close-up, a solitary figure standing in a dimly lit alleyway at night, "
+                                  "rain falling softly, neon lights reflecting off wet pavement, holding an old, "
+                                  "worn-out guitar, fingers gently strumming, eyes closed in concentration, "
+                                  "a melancholic expression, memories flashing in the background, graffiti-covered "
+                                  "walls, steam rising from a nearby sewer grate, shallow depth of field, soft focus, "
+                                  "cinematic lighting, vintage film grain, black and white, evocative, emotional, "
+                                  "storytelling, Nikon photography, urban decay, nostalgia, longing, artistic.}"}, ]
 
 
 # Clean up the lyrics removing unwanted text and advertisements
