@@ -210,7 +210,7 @@ class MusicInterpreterCog(commands.Cog, name="MusicInterpreterCog", description=
 
         # get a funny message
         funny_text = utils.funny_message()
-        funny_text = f"**{funny_text}**\n**Song:** {song}\n**Artist:** {artist}"
+        funny_text = "**" + funny_text + "**\n**Song:** " + song + "\n**Artist:** " + artist
 
         await acknowledgement.edit_original_response(
             content=f"{funny_text}\nGenerating {num_images} images for you!")
