@@ -213,7 +213,7 @@ class MusicInterpreterCog(commands.Cog, name="MusicInterpreterCog", description=
         funny_text = f"**{funny_text}**\n**Song:** {song}\n**Artist:** {artist}"
 
         await acknowledgement.edit_original_response(
-            content=f"**{funny_text}**\nGenerating {num_images} images for you!")
+            content=f"{funny_text}\nGenerating {num_images} images for you!")
         # Send the request to the queue
         await core.queueHandler.add_request(funny_text, acknowledgement, "txt2img", prompt, negative_prompt,
                                             model_path, num_images, height, width, steps, cfg_scale, sampler_name,
